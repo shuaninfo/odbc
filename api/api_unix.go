@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build (darwin || linux || freebsd) && cgo
 // +build darwin linux freebsd
 // +build cgo
 
@@ -12,8 +13,8 @@ package api
 // #cgo linux LDFLAGS: -lodbc
 // #cgo freebsd LDFLAGS: -L /usr/local/lib -lodbc
 // #cgo freebsd CFLAGS: -I/usr/local/include
-// #include <sql.h>
-// #include <sqlext.h>
+// #include <sqlo.h>
+// #include <sqlexto.h>
 // #include <stdint.h>
 /*
 SQLRETURN sqlSetEnvUIntPtrAttr(SQLHENV environmentHandle, SQLINTEGER attribute, uintptr_t valuePtr, SQLINTEGER stringLength) {
