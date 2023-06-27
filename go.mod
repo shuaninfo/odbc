@@ -1,4 +1,4 @@
-module github.com/shuaninfo.com/odbc
+module github.com/shuaninfo/odbc
 
 require (
 	github.com/go-ole/go-ole v1.2.5
